@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class TankController : MonoBehaviour
 {
@@ -18,6 +19,15 @@ public class TankController : MonoBehaviour
         MoveJoystick.SendMovementDirection.AddListener(Movement);
         AttackJoystick.SendAttackDirection.AddListener(RotateTower);
     }
+    
+#if UNITY_EDITOR
+    private void Update()
+    {
+        controller.Move(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * _speed * Time.deltaTime);
+
+    }
+#endif
+
 
     public GameObject GetTower()
     {

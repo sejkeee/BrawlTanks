@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88d326d880b4144380b1eb81848d0dc, type: 3}
+  m_Name: Cannon2
+  m_EditorClassIdentifier: 
+  _main: {fileID: 7650968455523306066, guid: d1fda77f04e1ae848a61b31cf0cf0b88, type: 3}
+  _icon: {fileID: 21300000, guid: 20f0fb5a5e4f98748aec340e9db8f0f2, type: 3}
