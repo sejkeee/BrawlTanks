@@ -28,7 +28,7 @@ public class SetupTank : MonoBehaviour
         Cell.CellClicked.AddListener(UpdateSetup);
     }
 
-    public void UpdateSetup()
+    private void UpdateSetup()
     {
         Destroy(_bodyInstance);
         Destroy(_towerInstance);
