@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -17,6 +18,9 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var effectInstance = Instantiate(effect, transform.position, transform.rotation);
+        
+        if(other.GetComponent<Enemy>() != null)     Destroy(other.gameObject);
+        
         Destroy(gameObject);
     }
 }
