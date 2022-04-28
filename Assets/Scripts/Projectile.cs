@@ -18,8 +18,12 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var effectInstance = Instantiate(effect, transform.position, transform.rotation);
-        
-        if(other.GetComponent<Enemy>() != null)     Destroy(other.gameObject);
+
+        if (other.GetComponent<Enemy>() != null)
+        {
+            print("IS ENEMY");
+            Destroy(other.gameObject);
+        }
         
         Destroy(gameObject);
     }
