@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider col)
+    private void OnTriggerEnter(Collider trigger)
     {
-        if (col.TryGetComponent(out Projectile projectile))
+        if (trigger.TryGetComponent(out Projectile projectile))
         {
             Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }
