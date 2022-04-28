@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Assets.Scripts;
 using UnityEngine;
 
@@ -9,26 +10,28 @@ public class MapSpawner : MonoBehaviour
 
     [SerializeField] private List<GameObject> GroundBlocks
         = new List<GameObject>();
-    [SerializeField] private List<GameObject> OutsideBlocks
-        = new List<GameObject>();
-        
-    
-    private MapCreator _mapCreator;
 
-    private void Start()
+
+    private int[,] _maps;
+
+    private IEnumerator Start()
     {
-        _mapCreator = MapCreator.GetMap();
-        SpawnMap();
+        _maps = Maps.GetMap();
+        yield return StartCoroutine(SpawnMap());
     }
-    
-    
-    private void SpawnMap()
-    {
-        foreach (var blockPos in _mapCreator.Ground)
-        {
-            if(blockPos.y > 0)    Instantiate(OutsideBlocks[Random.Range(0, OutsideBlocks.Count)], blockPos*_blockMetr, Quaternion.identity);
 
-            else Instantiate(GroundBlocks[Random.Range(0, GroundBlocks.Count)], blockPos*_blockMetr, Quaternion.identity);
+    private IEnumerator SpawnMap()
+    {
+        for (var i = 0; i < _maps.GetLength(0); i++)
+        {
+            for (var j = 0; j < _maps.GetLength(1); j++)
+            {
+                if(_maps[i, j] <= 1)    Instantiate(GroundBlocks[(i+j)%2], new Vector3(i, _maps[i, j], j) * _blockMetr, Quaternion.identity);
+                
+                else    Instantiate(GroundBlocks[_maps[i, j]], new Vector3(i, 1, j) * _blockMetr, Quaternion.identity);
+                    
+                yield return null;
+            }
         }
     }
 }

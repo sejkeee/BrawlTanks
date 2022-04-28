@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: bbe9494f815f3c340956427c884b72a0, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.14162312, g: 0.3253057, b: 0.3661156, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1127,7 +1127,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163114388}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 42.81, y: 1, z: 35.25}
+  m_LocalPosition: {x: 4, y: 1, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
@@ -1174,7 +1174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491172685}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.81, y: 1, z: 41.42}
+  m_LocalPosition: {x: 4, y: 1, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 323688777}
@@ -1552,7 +1552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2009733830
 Transform:
   m_ObjectHideFlags: 0
@@ -1582,9 +1582,5 @@ MonoBehaviour:
   GroundBlocks:
   - {fileID: 8690054359426779120, guid: 5f8f6fcbba0d98143aeb9a82292e0ed1, type: 3}
   - {fileID: 1888716491917423968, guid: 1be962d5dff5245439f6e5442298b4ca, type: 3}
-  OutsideBlocks:
-  - {fileID: 1888716491917423968, guid: 9a1621d5c61d2b9418c656bc29edefe7, type: 3}
-  - {fileID: 8690054359426779120, guid: 1ca1c5da59bd5b54cab839fa8b7a9222, type: 3}
-  - {fileID: 1888716491917423968, guid: 25aba30dd9e9ae64ab3ff917cd3ccff1, type: 3}
-  - {fileID: 8690054359426779120, guid: e5b30c9b56f797b48b71f3204ec2a371, type: 3}
-  - {fileID: 1888716491917423968, guid: 9444cc0177e10d1439a5abf793dd37d6, type: 3}
+  - {fileID: 1141854476560308, guid: 7e40bbc6be241754e8d7dbdecba49ee1, type: 3}
+  - {fileID: 5052870608993617809, guid: e8ed73e0549cb78418e54ce683c01821, type: 3}
