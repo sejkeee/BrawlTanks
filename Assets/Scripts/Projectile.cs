@@ -21,7 +21,6 @@ public class Projectile : MonoBehaviour
 
         if (other.GetComponent<Enemy>() != null)
         {
-            print("IS ENEMY");
             Destroy(other.gameObject);
         }
         
