@@ -14,7 +14,7 @@ public class Cannon : MonoBehaviour
 
     private void Shot()
     {
-        var projectile = Instantiate(_projectile, transform.position, transform.rotation);
+        var projectile = Instantiate(_projectile, transform.position + Vector3.forward, transform.rotation);
         //var effect = Instantiate(_shotEffect, transform.position, transform.rotation);
     }
 }
